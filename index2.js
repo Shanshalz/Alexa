@@ -259,9 +259,8 @@ const SaveAttributesResponseInterceptor = {
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
-        RegisterBirthdayIntentHandler,
-        SayBirthdayIntentHandler,
         HelpIntentHandler,
+        CategoryIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
         SessionEndedRequestHandler,
@@ -276,5 +275,4 @@ exports.handler = Alexa.SkillBuilders.custom()
         LoggingResponseInterceptor,
         SaveAttributesResponseInterceptor)
     .withPersistenceAdapter(persistenceAdapter)
-    .withCustomUserAgent('sample/happy-birthday/mod4')
     .lambda();
